@@ -1,9 +1,9 @@
-const form = document.querySelector(".js-form"),
-  input = form.querySelector("input"),
+const form = document.querySelector(".js-form"),  // class js-form인 dom 가져옴 
+  input = form.querySelector("input"),    
   greeting = document.querySelector(".js-greetings");
 
   // 클래스 추가 
-const USER_LS = "currentUser",
+const USER_LS = "currentUser",   // key 값
   SHOWING_CN = "showing";  
 
   // 받아온 value 저장하는 function
@@ -37,13 +37,14 @@ function painGreeting(text){
 }
 
 function loadName(){
-  // 로컬 스토리지에서 값을 가져온다
-  const currentUser = localStorage.getItem(USER_LS);
-  if(currentUser === null){
-    // she is not
-    askForName();
+  // 로컬 스토리지에서 값을 가져온다2
+  const currentUser = localStorage.getItem(USER_LS); // localStorage 로컬저장공간에 접근할 수 있는 storage 객체
+
+  if(currentUser === null){  // localstorage에 key값currentUser에 value가 있으면 
+    // she is not. 없으면 이름을 물어보기
+    askForName();  
   }else{
-   // she is
+   // she is. 인사하면서 글씨가 나타나는거 
     painGreeting(currentUser);
   }
 }
