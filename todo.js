@@ -41,8 +41,9 @@ function saveToDos(){
       delBtn.addEventListener("click", deleteToDo);
       span.innerHTML = text;
       // 부모 element 안에 뭔가를 넣는다 .appendChild
-      li.appendChild(delBtn);
       li.appendChild(span);
+      li.appendChild(delBtn);
+      
       li.id = newId;
       //비어있는 li를 만들었고, 그 안에 버튼, span만들고 나서 
       toDoList.appendChild(li);
