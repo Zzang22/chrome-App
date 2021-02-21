@@ -4,12 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Something</title>
+  <link rel="stylesheet" href="font/Rimouski.css">
   <link rel="stylesheet" href="index.css" />
 </head>
 <body>
   <div class="js-clock">
     <h1 class="js-titile">00:00</h1>
   </div>
+  <div class="container">
+    <div class="app-title">
+        <p>Weather</p>
+    </div>
+    <div class="notification"> </div>
+    <div class="weather-container">
+        <div class="weather-icon">
+            <img src="icons/unknown.png" alt="">
+        </div>
+        <div class="temperature-value">
+            <p>- ℃</p>
+        </div>
+        <div class="temperature-description">
+            <p> - </p>
+        </div>
+        <div class="location">
+            <p>-</p>
+        </div>
+    </div>
+</div>
   <form class="js-form form">
     <input type="text" placeholder="What is your name?" />
   </form>
@@ -25,6 +46,7 @@
   <script src="greeting.js"></script>
   <script src="todo.js"></script>
   <script src="bg.js"></script>
-  <script src="weather.js"></script>
+  <!--<script src="weather.js"></script>-->
+  <script src="weather2.js"></script>
 </body>
 </html>
