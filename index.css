@@ -4,12 +4,41 @@
 body {
   background-color: #293251;
   /*#2c3e50;*/
+  margin: 0;
 }
 /*
 body {
   color: #34495e;
 }
 */
+a {
+  text-decoration: none;
+  color: white;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #263343;
+  padding: 8px 12px;
+}
+.navbar__logo img {
+  width: 100px;
+  height: 80px;
+}
+.navbar__menu {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+.navbar__menu li {
+  padding: 8px 12px;
+}
+.navbar__icon a {
+  padding: 12px 12px;
+  color: whitesmoke;
+}
+
 .form,
 .greetings {
   display: none;
