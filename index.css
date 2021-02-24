@@ -1,3 +1,9 @@
+/*css 변수*/
+:root {
+  --text-color: #f8f4f5;
+  --background-color: #263343;
+  --accent-color: blanchedalmond;
+}
 * {
   font-family: "Rimouski";
 }
@@ -13,30 +19,76 @@ body {
 */
 a {
   text-decoration: none;
-  color: white;
+  color: var(--text-color);
 }
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #263343;
+  background-color: var(--background-color);
   padding: 8px 12px;
 }
 .navbar__logo img {
   width: 100px;
   height: 80px;
+  padding-left: 15px;
 }
 .navbar__menu {
   display: flex;
   list-style: none;
   padding-left: 0;
+  font-size: 18px;
 }
 .navbar__menu li {
   padding: 8px 12px;
 }
-.navbar__icon a {
-  padding: 12px 12px;
-  color: whitesmoke;
+.navbar__menu li:hover {
+  background-color: var(--accent-color);
+  border-radius: 4px;
+}
+.navbar__icon {
+  padding: 8px 12px;
+  color: var(--text-color);
+  font-size: 18px;
+  display: flex;
+}
+.navbar__toogleBtn {
+  display: none;
+  position: absolute;
+  right: 32px;
+  top: 15px;
+  font-size: 24px;
+  color: blueviolet;
+}
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+
+  .navbar__menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .navbar__menu li {
+    width: 100%;
+    text-align: center;
+  }
+  .navbar__icon {
+    display: none;
+    justify-content: center;
+    width: 100%;
+  }
+  .navbar__toogleBtn {
+    display: block;
+  }
+  .navbar__menu.active,
+  .navbar__icon.active {
+    display: flex;
+  }
 }
 
 .form,
