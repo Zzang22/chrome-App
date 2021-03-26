@@ -1,3 +1,4 @@
+/*
 const weather = document.querySelector(".js-weather");
 
 const API_KEY = '9bfe3fbfac837fd2630d7141d0feed72';
@@ -74,3 +75,4 @@ function init(){
 }
 
 init();
+*/

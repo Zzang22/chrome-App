@@ -8,7 +8,7 @@
   font-family: "Rimouski";
 }
 body {
-  background-color: #293251;
+  background-color: #edeef1;
   /*#2c3e50;*/
   margin: 0;
 }
@@ -21,16 +21,22 @@ a {
   text-decoration: none;
   color: var(--text-color);
 }
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: var(--background-color);
   padding: 8px 12px;
+  opacity: 1;
+  transition: opacity 1s;
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin-top: -60px;
 }
+
 .navbar__logo img {
-  width: 100px;
-  height: 80px;
   padding-left: 15px;
 }
 .navbar__menu {
@@ -56,15 +62,19 @@ a {
   display: none;
   position: absolute;
   right: 32px;
-  top: 15px;
+  top: 30px;
   font-size: 24px;
   color: blueviolet;
+}
+.opa {
+  opacity: 0.5;
 }
 @media screen and (max-width: 768px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
     padding: 8px 24px;
+    z-index: 1;
   }
 
   .navbar__menu {
@@ -88,6 +98,15 @@ a {
   .navbar__menu.active,
   .navbar__icon.active {
     display: flex;
+  }
+  .js-clock {
+    margin: 0px auto;
+    text-align: center;
+    width: 70%;
+  }
+  .js-clock h1 {
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -126,6 +145,22 @@ a {
 
   border-radius: 10px;
   padding-bottom: 50px;
+  /*
+  animation: slidein 1s linear;
+  
+  animation-duration: 2s;
+  animation-name: slidein;
+*/
+  position: relative;
+  top: 140px;
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 50%;
+  }
 }
 
 .app-title {
@@ -205,4 +240,10 @@ a {
   color: #293251;
   text-align: center;
   font-size: 0.8em;
+}
+.js-clock {
+  position: relative;
+  text-align: center;
+  top: 110px;
+  font-size: 30pt;
 }

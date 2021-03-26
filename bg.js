@@ -1,6 +1,17 @@
 const body = document.querySelector("body");
+const navBar = document.querySelector(".navbar");
+const IMG_NUMBER = 9;
 
-const IMG_NUMBER = 5;
+let prevScroll = window.pageYOffset;
+window.onscroll = handleScroll;
+function handleScroll(e){
+  let currScroll = window.pageYOffset;
+  if(prevScroll < currScroll){
+    navBar.classList.add('opa');
+  }else{
+    navBar.classList.remove('opa');
+  }
+}
 
 function handleImgLoad(){
 
@@ -9,7 +20,7 @@ function handleImgLoad(){
 function paintImage(imgNumber){
 
   const image = new Image();
-  image.src = `images/warm${imgNumber + 1}.jpg`;
+  image.src = `images/white${imgNumber + 1}.jpg`;
   image.classList.add("bgImage");
   body.prepend(image);
   image.addEventListener("loadend", handleImgLoad);
